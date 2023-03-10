@@ -23,19 +23,13 @@
     <img src="https://cdn.dribbble.com/users/2463018/screenshots/13930887/f1_mclaren_final-05.jpg" alt="Logo" width="160" height="160">
   </a>
 
-<h3 align="center">Formula 1 Data ETL/ELT</h3>
+<h3 align="center">Formula 1 Data ETL/ELT Pipeline</h3>
 
   <p align="center">
-    project_description
+    This project utilises modern data stack etl/elt technologies such as Terraform, DBT and Snowflake, to ingest, transform and deploy real-word formula 1 data from a source postgres database to a full fledged snowflake datawarehouses, in which data can be further transformed to meet end-users needs (with DBT)
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/formula1elt"><strong>Explore the docs »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
   </p>
 </div>
 
@@ -63,7 +57,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -71,10 +64,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+This projet uses data downloaded from the ergast api documentation. http://ergast.com/mrd/.
+The API provides data for the Formula One series, from the beginning of the world championships in 1950
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
