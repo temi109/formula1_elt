@@ -15,7 +15,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="right">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/temi109/formula1_elt.git">
     <img src="https://cdn.dribbble.com/users/2463018/screenshots/13930887/f1_mclaren_final-05.jpg" alt="Logo" width="160" height="160">
   </a>
 
@@ -87,6 +87,13 @@ The aim of this project is to extract the data from these source postrges tables
 * Terraform installed
 * DBT installed
 
+#### Required for KinD Cluster:
+
+- Kubectl
+- Helm
+- Docker
+- KinD
+
 
 To initialise terraform and create the s3 bucket, run the following commands:
 
@@ -110,19 +117,53 @@ To initialise terraform and create the s3 bucket, run the following commands:
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+1. Clone the repo
+ ```sh
+ https://github.com/temi109/formula1_elt.git
+ ```
+2. Change directories into k8s-airflow folder and create a k8s cluster of 1 control plane and 3 worker nodes
+ ```sh
+ cd k8s-airflow/
+
+ kind create cluster --name airflow-cluster --config kind-cluster.yaml
+
+ # Add the official repository of the Airflow Helm Chart
+ helm repo add apache-airflow https://airflow.apache.org
+
+ # Update the repo
+ helm repo update
+
+ # Create namespace airflow
+ kubectl create namespace airflow
+
+ # Check the namespace 
+ kubectl get namespaces
+
+ # Install the Airflow Helm Chart and start it 
+ helm install airflow ./airflow/ --namespace airflow --debug
+
+ # Get pods
+ kubectl get pods -n airflow
+ ```
+3. Build dockerfile and upgrade the cluster
+ ```sh
+
+ # (Make sure you're in k8s-airflow folder)
+ docker build -t airflow-custom:2.5.1 .
+
+ kind load docker-image airflow-custom:2.5.1 --name airflow-cluster
+
+ cd airflow/
+
+ helm upgrade airflow --values=myvalues.yaml . --namespace airflow --debug
+
+ # Port forward 8080:8080
+ kubectl port-forward svc/airflow-webserver 8080:8080 -n airflow --context kind-airflow-cluster
+
+ # Validating server up and running
+ Go to browser and type localhost:8080 into browser search, and the username/password admin, admin respectively.
+
+ ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
