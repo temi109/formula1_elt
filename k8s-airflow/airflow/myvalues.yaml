@@ -9,4 +9,4 @@ dags:
     enabled: true
     repo: https://github.com/temi109/formula1_elt.git
     branch: main
-    subPath: "dags"
+    subPath: "k8s-airflow/dags"
