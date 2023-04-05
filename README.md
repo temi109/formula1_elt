@@ -113,7 +113,7 @@ To initialise terraform and create the s3 bucket, run the following commands:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+<img height="500" width="750" border="10" src="images/trial workflow.png">
 
 ### Installation
 
@@ -166,6 +166,8 @@ To initialise terraform and create the s3 bucket, run the following commands:
  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 
 
