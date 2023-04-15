@@ -74,7 +74,7 @@ The aim of this project is to extract the data from these source postrges tables
 <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px">&nbsp;***Languages & Tools I Know...***
 <p align="left">
   
-<code><img height="50" src="images/Snowflake_Logo.svg.png"></code> <code><img height="50" src="images/airflow_log.png"></code> <code><img height="50" src="images/aws_s3.png"> </code><code> <img height="50" src="images/dbt_logo.png"> </code><code> <img height="50" src="images/postgres_logo.png"></code> <code><img height="50" src="images/terraform_logo.png"></code>
+<img height="50" src="images/Snowflake_Logo.png"> &nbsp; </code> <img height="50" src="images/airflow_log.png"></code> <img height="50" src="images/aws_s3.png"> &nbsp; </code> <img height="50" src="images/dbt_logo.png"> &nbsp; </code>  <img height="50" src="images/terraform_logo.png"> &nbsp; </code> <img height="50" src="images/Kubernetes-Logo.png"> &nbsp;</code> <img height="50" src="images/docker_logo.jpg"></code> &nbsp; </code> <img height="50" src="images/postgres_logo.png">
 
 
 
